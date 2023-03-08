@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load bootstrap5 %}
+    {% block title %}Alugar um Carro{% endblock title %}
+    {% block content %}
+    <h1>Alugar um Carro</h1>
+
+    <form method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Alugar
+    </button>
+    {% endbuttons %}
+    </form>
+    {% endblock content %}

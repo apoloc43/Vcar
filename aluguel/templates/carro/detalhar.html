@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block title %}Carro: {{ carro.marca }} - {{ carro.modelo }} {% endblock title %}
+{% block content %}
+<h1>Detalhes do carro</h1>
+<h2>Carro:</h2>
+<div class="d-flex justify-content-end">
+</div>
+<div class="card mt-4">
+    <div class="card-header">
+        {{ carro.codigo }}
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Marca: {{ carro.marca }}</li>
+            <li class="list-group-item">Modelo: {{ carro.modelo }}</li>
+            <li class="list-group-item">Data de compra: {{ carro.comprar }}</li>
+          </ul>
+    </div>
+</div>
+{% endblock content %}
