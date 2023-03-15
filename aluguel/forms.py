@@ -6,7 +6,7 @@ class ClienteForm(ModelForm):
         model = Cliente
         fields = '__all__'
 
-class BikeForm(ModelForm):
+class CarroForm(ModelForm):
     class Meta:
         model = Carro
         fields = '__all__'

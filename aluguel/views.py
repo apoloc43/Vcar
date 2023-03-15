@@ -56,3 +56,4 @@ def realizar_aluguel_carro(request, carro_pk):
     else:
         form = AluguelForm(instance=aluguel)
         return render(request, "aluguel/cadastrar.html", {'form': form})
+    
