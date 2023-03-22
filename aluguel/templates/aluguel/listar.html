@@ -2,10 +2,30 @@
 
 {% block content %}
 
-<ul class="list-group list-group-flush">
-    {% for aluguel in alugueis %}
-    <li class="list-group-item">{{aluguel.codigo}} - {{aluguel.cliente}} - {{aluguel.carro}}</li>
-    {% endfor %}
-  </ul>
+<div class="row mb-2">
+  {% for aluguel in alugueis %}
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <h3 class="mb-0">{{aluguel.codigo}}</h3>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cliente: {{ aluguel.cliente }}</li>
+              <li class="list-group-item">Carro: {{ aluguel.carro }}</li>
+              <li class="list-group-item">Data do aluguel: {{ aluguel.data_aluguel }}</li>
+              <li class="list-group-item">Valor: {{ aluguel.valor }}</li>
+              <li class="list-group-item">Data devolucao: {{ aluguel.data_devolucao }}</li>
+  
+            </ul>
+      </div>
+         
+      </div>
+      
+    </div>
+  </div>
+  
+  {% endfor %}
+</div>
 
-{% endblock content %}
+
+{% endblock content %}     

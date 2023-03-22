@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block title %}Cliente: {{ cliente.nome }} - {{ cliente.email }} {% endblock title %}
+{% block content %}
+<h1>Detalhes do cliente</h1>
+<h2>cliente:</h2>
+<div class="d-flex justify-content-end">
+</div>
+<div class="card mt-4">
+    <div class="card-header">
+        
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nome: {{ cliente.nome }}</li>
+            <li class="list-group-item">CPF: {{ cliente.cpf }}</li>
+            <li class="list-group-item">Data de Nascimento: {{ cliente.data_nascimento }}</li>
+            <li class="list-group-item">E-mail: {{ cliente.email }}</li>
+
+          </ul>
+    </div>
+</div>
+{% endblock content %}

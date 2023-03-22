@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load bootstrap5 %}
+{% block title %}Mini CARROS - Cadastrar Carro{% endblock title %}
+{% block content %}
+    <h1>Mini CARROS</h1>
+    <h2>Cadastro de Carros:</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+        Cadastrar
+    </button>
+    {% endbuttons %}
+    </form>
+{% endblock content %}

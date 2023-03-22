@@ -1,19 +1,25 @@
 {% extends 'index.html' %}
-{% block title %}Carro: {{ carro.marca }} - {{ carro.modelo }} {% endblock title %}
+{% block title %}Mini Carros - Carros: {{ carro.modelo }} {% endblock title %}
 {% block content %}
-<h1>Detalhes do carro</h1>
-<h2>Carro:</h2>
+<h1>Mini Carros</h1>
+<h2>{{ carro.modelo }}:</h2>
 <div class="d-flex justify-content-end">
+<div class="btn-group">
+    <a href="{% url 'atualizar_carro' carro.pk %}" class="btn btn-primary">Atualizar</a>
+    <a href="{% url 'deletar_carro' carro.pk %}" class="btn btn-danger">Deletar</a>
+    
+</div>
 </div>
 <div class="card mt-4">
     <div class="card-header">
-        {{ carro.codigo }}
+        {{ autor.nome }}
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Marca: {{ carro.marca }}</li>
             <li class="list-group-item">Modelo: {{ carro.modelo }}</li>
-            <li class="list-group-item">Data de compra: {{ carro.comprar }}</li>
+            <li class="list-group-item">Marca: {{ carro.marca }}</li>
+            <li class="list-group-item">Ano: {{ carro.ano }}</li>
+            <li class="list-group-item">Placa: {{ carro.placa }}</li>
           </ul>
     </div>
 </div>

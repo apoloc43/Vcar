@@ -2,10 +2,22 @@
 
 {% block content %}
 
-<ul class="list-group list-group-flush">
-    {% for carro in carros %}
-    <li class="list-group-item">{{carro.codigo}} - {{carro.marca}} - {{carro.modelo}}</li>
-    {% endfor %}
-  </ul>
+<div class="row mb-2">
+  {% for carro in carros %}
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <h3 class="mb-0">{{carro.marca}}</h3>
+        <div class="mb-1 text-muted">{{carro.modelo}}</div>
+        <p class="card-text mb-auto">{{carro.placa}} - {{carro.modelo}}</p>
+         <a href="{% url 'detalhar_carro' carro.pk %}" class="btn btn-primary mt-4">Detalhes</a>
+      </div>
+      
+    </div>
+  </div>
+  
+  {% endfor %}
+</div>
 
-{% endblock content %}
+
+{% endblock content %}    

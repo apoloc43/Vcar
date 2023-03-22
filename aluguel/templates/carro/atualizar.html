@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load bootstrap5 %}
+    {% block title %}Mini Carros - Atualizar Carro {% endblock title %}
+    {% block content %}
+    <h1>Mini Carros</h1>
+    <h2>Atualizar Carros: {{ form.instance.nome}}</h2>
+
+    <form method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Atualizar
+    </button>
+    {% endbuttons %}
+    </form>
+    {% endblock content %}
